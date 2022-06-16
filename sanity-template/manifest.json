@@ -1,0 +1,50 @@
+{
+    "version": 2, 
+    "title": "Next.JS Blog Template With Sanity.io",
+    "description": "This is a starter blog template created with next.js - a react framework and sanity as a backend tool. It also includes comment section.",
+    "previewMedia": {
+      "type": "image",
+      "src": "./sanity-template/assets/main.png",
+      "alt": "Landing Page Preview"
+    },
+    
+    "deployment": {
+      "provider": "vercel",
+      "sites": [
+        {
+          "id": "studio",
+          "type": "studio",
+          "title": "Sanity Studio",
+          "description": "The Sanity Studio is where you edit and structure your content.",
+          "dir": "./medium-clone",
+          "previewMedia": {
+            "type": "image",
+            "src": "./sanity-template/assets/main.png",
+            "alt": ""
+          },
+          "buildSettings": {
+            "base": "studio-path",
+            "dir": "dist",
+            "cmd": "npm run build"
+          }
+        },
+        {
+          "id": "site",
+          "type": "web",
+          "title": "Title for the project",
+          "description": "Description for the project",
+          "dir": "/",
+          "buildSettings": {
+            "base": "site-directory",
+            "dir": "/",
+            "cmd": "npm run build"
+          },
+          "previewMedia": {
+            "type": "image",
+            "src": "./sanity-template/assets/main.png",
+            "alt": ""
+          }          
+        }
+      ]
+    }
+  }
